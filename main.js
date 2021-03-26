@@ -1,7 +1,14 @@
-
-const add = () => {
-    let number = 0; 
-    number++;
-    document.body.textContent = `aktualny stan licznika to ${number}`;
+const clock = () => {
+    let time = 0;
+    const counter = () => {
+        time++;
+        document.body.textContent = `Jesteś na stronie przez ${time} sekund.`
+        document.body.style.fontSize = "40px";
+        document.body.style.fontWeight = "bold";
+        document.body.style.fontFamily = "Arial";
+    }
+    return counter
 }
-document.addEventListener('click', add)
+
+const myTime = clock();
+setInterval(myTime, 1000);
